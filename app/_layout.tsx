@@ -63,7 +63,7 @@ function DrawerLayoutContent() {
       if (!user && !inAuthGroup) {
         router.replace('/login');
       } else if (user && inAuthGroup) {
-        router.replace('/');
+        router.replace('/(home)/index');
       }
     }, 0);
 
@@ -86,7 +86,7 @@ function DrawerLayoutContent() {
         drawerLabelStyle: { fontFamily: retroTheme.fonts.mono, fontWeight: 'bold' },
       }}
     >
-      <Drawer.Screen name="index" options={{ drawerLabel: 'Головна' }} />
+      <Drawer.Screen name="(home)" options={{ drawerLabel: 'Головна' }} />
       <Drawer.Screen name="favorites" options={{ drawerLabel: 'Улюблені книги' }} />
       <Drawer.Screen name="profile" options={{ drawerLabel: 'Профіль користувача' }} />
       <Drawer.Screen name="about" options={{ drawerLabel: 'Про застосунок' }} />

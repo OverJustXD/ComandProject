@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { retroStyles, retroTheme } from '../constants/retroStyles';
+import { retroStyles, retroTheme } from '@/constants/retroStyles';
 
 export default function FavoritesScreen() {
   return (

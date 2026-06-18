@@ -54,5 +54,22 @@ export const retroStyles = StyleSheet.create({
     borderColor: retroTheme.colors.dark,
     borderStyle: 'dashed',
     marginVertical: 15,
+  },
+  categories:{
+    alignItems:'center',
+    gap: 10,
+  },
+  category:{
+    backgroundColor: '#fdf1a9',
+    borderWidth: 3,
+    borderColor: retroTheme.colors.dark,
+    padding: 15,
+    alignItems: 'center',
+    shadowColor: retroTheme.colors.dark,
+    shadowOffset: { width: 4, height: 4 },
+    shadowOpacity: 1,
+    shadowRadius: 0,
+    elevation: 4,
+    width: '75%',
   }
 });

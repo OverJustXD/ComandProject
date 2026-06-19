@@ -3,8 +3,8 @@ import { useRootNavigationState, useRouter, useSegments } from 'expo-router';
 import { Drawer } from 'expo-router/drawer';
 import React, { useEffect } from 'react';
 import { Alert, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { retroTheme } from '../constants/retroStyles';
-import { AuthProvider, useAuth } from '../context/_authContext';
+import { retroTheme } from '@/constants/retroStyles';
+import { AuthProvider, useAuth } from '@/context/_authContext';
 
 function CustomDrawerContent(props: any) {
   const { user, logout } = useAuth();
@@ -63,7 +63,7 @@ function DrawerLayoutContent() {
       if (!user && !inAuthGroup) {
         router.replace('/login');
       } else if (user && inAuthGroup) {
-        router.replace('/(home)/index');
+        router.replace('/');
       }
     }, 0);
 
@@ -86,7 +86,7 @@ function DrawerLayoutContent() {
         drawerLabelStyle: { fontFamily: retroTheme.fonts.mono, fontWeight: 'bold' },
       }}
     >
-      <Drawer.Screen name="(home)" options={{ drawerLabel: 'Головна' }} />
+      <Drawer.Screen name="(home)" options={{ drawerLabel: 'Головна', popToTopOnBlur: true }} />
       <Drawer.Screen name="favorites" options={{ drawerLabel: 'Улюблені книги' }} />
       <Drawer.Screen name="profile" options={{ drawerLabel: 'Профіль користувача' }} />
       <Drawer.Screen name="about" options={{ drawerLabel: 'Про застосунок' }} />
